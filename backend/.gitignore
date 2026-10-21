@@ -1,0 +1,36 @@
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Node.js / React
+node_modules/
+dist/
+coverage/
+
+# DuckDB local databases
+*.duckdb
+*.duckdb.wal
+*.db
+
+# Local vector databases
+chroma_data/
+chroma_db/
+
+# Uploaded user data
+uploads/
+
+# Editor and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

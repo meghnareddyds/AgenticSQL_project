@@ -1,0 +1,501 @@
+order_id,order_date,product,category,region,quantity,unit_price,revenue
+1,2025-05-06,Monitor,Electronics,East,1,240,240
+2,2025-12-13,Mouse,Accessories,North,3,35,105
+3,2025-01-16,Monitor,Electronics,North,7,240,1680
+4,2025-09-16,Monitor,Electronics,South,4,240,960
+5,2025-04-23,Laptop,Electronics,West,4,950,3800
+6,2025-03-23,Webcam,Electronics,North,5,85,425
+7,2025-03-21,Headphones,Electronics,East,6,120,720
+8,2025-02-17,Mouse,Accessories,North,6,35,210
+9,2025-06-26,Headphones,Electronics,East,2,120,240
+10,2025-10-02,Desk,Furniture,West,1,320,320
+11,2025-10-10,Monitor,Electronics,North,7,240,1680
+12,2025-12-27,Desk,Furniture,South,6,320,1920
+13,2025-05-29,Monitor,Electronics,South,1,240,240
+14,2025-07-14,Monitor,Electronics,North,4,240,960
+15,2025-03-25,Desk,Furniture,East,8,320,2560
+16,2025-12-10,Office Chair,Furniture,South,6,180,1080
+17,2025-10-01,Desk,Furniture,South,2,320,640
+18,2025-07-14,Mouse,Accessories,West,3,35,105
+19,2025-01-29,Desk,Furniture,East,4,320,1280
+20,2025-07-25,Mouse,Accessories,East,1,35,35
+21,2025-10-18,Desk,Furniture,South,2,320,640
+22,2025-07-22,Office Chair,Furniture,West,4,180,720
+23,2025-03-13,Webcam,Electronics,East,3,85,255
+24,2025-10-26,Mouse,Accessories,West,5,35,175
+25,2025-03-12,Headphones,Electronics,South,6,120,720
+26,2025-02-26,Webcam,Electronics,North,2,85,170
+27,2025-11-02,Keyboard,Accessories,West,3,75,225
+28,2025-11-02,Monitor,Electronics,West,7,240,1680
+29,2025-12-15,Webcam,Electronics,North,5,85,425
+30,2025-02-27,Monitor,Electronics,East,5,240,1200
+31,2025-08-21,Desk,Furniture,South,7,320,2240
+32,2025-09-17,Laptop,Electronics,South,5,950,4750
+33,2025-03-20,Monitor,Electronics,South,5,240,1200
+34,2025-11-03,Office Chair,Furniture,North,3,180,540
+35,2025-02-27,Office Chair,Furniture,North,8,180,1440
+36,2025-01-30,Office Chair,Furniture,South,5,180,900
+37,2025-09-06,Mouse,Accessories,North,2,35,70
+38,2025-12-04,Monitor,Electronics,South,3,240,720
+39,2025-09-28,Webcam,Electronics,East,3,85,255
+40,2025-06-09,Headphones,Electronics,South,4,120,480
+41,2025-09-22,Headphones,Electronics,West,6,120,720
+42,2025-04-26,Webcam,Electronics,South,2,85,170
+43,2025-10-29,Monitor,Electronics,North,6,240,1440
+44,2025-02-06,Mouse,Accessories,North,4,35,140
+45,2025-01-17,Laptop,Electronics,North,4,950,3800
+46,2025-05-23,Office Chair,Furniture,South,2,180,360
+47,2025-10-20,Webcam,Electronics,South,4,85,340
+48,2025-07-28,Webcam,Electronics,West,4,85,340
+49,2025-12-04,Mouse,Accessories,North,2,35,70
+50,2025-07-30,Headphones,Electronics,West,6,120,720
+51,2025-02-01,Webcam,Electronics,North,1,85,85
+52,2025-05-08,Headphones,Electronics,North,6,120,720
+53,2025-03-13,Mouse,Accessories,West,4,35,140
+54,2025-08-25,Headphones,Electronics,East,3,120,360
+55,2025-10-09,Mouse,Accessories,West,2,35,70
+56,2025-02-17,Monitor,Electronics,North,1,240,240
+57,2025-09-06,Mouse,Accessories,West,3,35,105
+58,2025-01-31,Webcam,Electronics,West,4,85,340
+59,2025-07-19,Keyboard,Accessories,North,7,75,525
+60,2025-08-05,Desk,Furniture,East,8,320,2560
+61,2025-06-01,Webcam,Electronics,South,3,85,255
+62,2025-06-10,Mouse,Accessories,North,1,35,35
+63,2025-09-15,Laptop,Electronics,West,1,950,950
+64,2025-04-06,Keyboard,Accessories,North,1,75,75
+65,2025-07-26,Monitor,Electronics,South,2,240,480
+66,2025-11-14,Monitor,Electronics,North,4,240,960
+67,2025-05-14,Monitor,Electronics,East,7,240,1680
+68,2025-05-16,Mouse,Accessories,South,6,35,210
+69,2025-08-23,Headphones,Electronics,East,3,120,360
+70,2025-08-23,Office Chair,Furniture,North,2,180,360
+71,2025-09-17,Monitor,Electronics,South,2,240,480
+72,2025-02-05,Desk,Furniture,East,3,320,960
+73,2025-03-22,Mouse,Accessories,East,6,35,210
+74,2025-12-08,Webcam,Electronics,North,5,85,425
+75,2025-05-16,Desk,Furniture,South,2,320,640
+76,2025-05-20,Monitor,Electronics,South,2,240,480
+77,2025-04-15,Desk,Furniture,East,4,320,1280
+78,2025-01-27,Desk,Furniture,East,8,320,2560
+79,2025-01-23,Monitor,Electronics,East,7,240,1680
+80,2025-11-23,Laptop,Electronics,South,6,950,5700
+81,2025-10-10,Desk,Furniture,West,3,320,960
+82,2025-02-08,Headphones,Electronics,North,1,120,120
+83,2025-10-26,Keyboard,Accessories,East,1,75,75
+84,2025-01-22,Keyboard,Accessories,South,7,75,525
+85,2025-07-03,Desk,Furniture,North,6,320,1920
+86,2025-07-01,Mouse,Accessories,North,4,35,140
+87,2025-03-25,Headphones,Electronics,South,3,120,360
+88,2025-04-02,Keyboard,Accessories,North,7,75,525
+89,2025-05-17,Office Chair,Furniture,South,7,180,1260
+90,2025-01-20,Keyboard,Accessories,West,2,75,150
+91,2025-08-24,Webcam,Electronics,South,4,85,340
+92,2025-04-25,Office Chair,Furniture,South,5,180,900
+93,2025-06-18,Laptop,Electronics,West,4,950,3800
+94,2025-06-29,Desk,Furniture,East,2,320,640
+95,2025-03-01,Headphones,Electronics,North,6,120,720
+96,2025-01-20,Desk,Furniture,East,3,320,960
+97,2025-06-10,Monitor,Electronics,East,7,240,1680
+98,2025-10-23,Headphones,Electronics,West,2,120,240
+99,2025-12-29,Mouse,Accessories,North,5,35,175
+100,2025-07-06,Headphones,Electronics,South,1,120,120
+101,2025-11-16,Headphones,Electronics,East,2,120,240
+102,2025-09-17,Office Chair,Furniture,East,2,180,360
+103,2025-07-26,Desk,Furniture,East,7,320,2240
+104,2025-08-04,Desk,Furniture,South,3,320,960
+105,2025-07-27,Headphones,Electronics,East,3,120,360
+106,2025-04-18,Laptop,Electronics,East,5,950,4750
+107,2025-08-15,Headphones,Electronics,West,6,120,720
+108,2025-03-28,Webcam,Electronics,West,4,85,340
+109,2025-02-17,Monitor,Electronics,East,5,240,1200
+110,2025-04-12,Mouse,Accessories,South,5,35,175
+111,2025-05-06,Keyboard,Accessories,North,1,75,75
+112,2025-08-01,Webcam,Electronics,West,2,85,170
+113,2025-07-24,Mouse,Accessories,West,7,35,245
+114,2025-02-24,Mouse,Accessories,North,3,35,105
+115,2025-12-23,Headphones,Electronics,South,4,120,480
+116,2025-03-04,Webcam,Electronics,South,1,85,85
+117,2025-12-08,Webcam,Electronics,West,3,85,255
+118,2025-10-08,Office Chair,Furniture,West,8,180,1440
+119,2025-08-19,Webcam,Electronics,West,3,85,255
+120,2025-09-24,Desk,Furniture,East,4,320,1280
+121,2025-08-14,Webcam,Electronics,East,4,85,340
+122,2025-05-20,Monitor,Electronics,South,5,240,1200
+123,2025-03-12,Office Chair,Furniture,North,6,180,1080
+124,2025-12-22,Keyboard,Accessories,West,4,75,300
+125,2025-08-01,Keyboard,Accessories,North,4,75,300
+126,2025-08-01,Headphones,Electronics,West,6,120,720
+127,2025-07-19,Laptop,Electronics,West,4,950,3800
+128,2025-01-04,Laptop,Electronics,West,7,950,6650
+129,2025-08-03,Office Chair,Furniture,West,5,180,900
+130,2025-05-20,Mouse,Accessories,South,8,35,280
+131,2025-07-19,Headphones,Electronics,North,8,120,960
+132,2025-08-28,Office Chair,Furniture,South,7,180,1260
+133,2025-10-31,Keyboard,Accessories,West,1,75,75
+134,2025-03-11,Laptop,Electronics,West,2,950,1900
+135,2025-05-14,Webcam,Electronics,North,3,85,255
+136,2025-08-21,Headphones,Electronics,South,6,120,720
+137,2025-05-23,Office Chair,Furniture,West,6,180,1080
+138,2025-08-29,Headphones,Electronics,North,5,120,600
+139,2025-04-25,Laptop,Electronics,East,1,950,950
+140,2025-05-07,Monitor,Electronics,North,1,240,240
+141,2025-05-03,Mouse,Accessories,South,1,35,35
+142,2025-10-16,Keyboard,Accessories,North,8,75,600
+143,2025-07-08,Mouse,Accessories,East,8,35,280
+144,2025-06-09,Keyboard,Accessories,South,2,75,150
+145,2025-10-22,Monitor,Electronics,East,1,240,240
+146,2025-02-08,Headphones,Electronics,South,7,120,840
+147,2025-12-17,Mouse,Accessories,East,2,35,70
+148,2025-09-30,Monitor,Electronics,East,1,240,240
+149,2025-09-17,Headphones,Electronics,North,6,120,720
+150,2025-09-08,Office Chair,Furniture,West,1,180,180
+151,2025-11-22,Monitor,Electronics,East,7,240,1680
+152,2025-04-01,Webcam,Electronics,West,3,85,255
+153,2025-08-12,Desk,Furniture,West,8,320,2560
+154,2025-02-14,Desk,Furniture,South,6,320,1920
+155,2025-08-26,Desk,Furniture,South,8,320,2560
+156,2025-09-11,Headphones,Electronics,North,6,120,720
+157,2025-04-19,Office Chair,Furniture,West,3,180,540
+158,2025-05-24,Office Chair,Furniture,East,5,180,900
+159,2025-02-13,Desk,Furniture,South,1,320,320
+160,2025-10-12,Mouse,Accessories,West,7,35,245
+161,2025-08-18,Mouse,Accessories,West,8,35,280
+162,2025-04-24,Laptop,Electronics,East,2,950,1900
+163,2025-12-06,Headphones,Electronics,East,4,120,480
+164,2025-08-06,Office Chair,Furniture,East,8,180,1440
+165,2025-05-19,Office Chair,Furniture,West,6,180,1080
+166,2025-03-03,Desk,Furniture,South,5,320,1600
+167,2025-10-02,Mouse,Accessories,North,6,35,210
+168,2025-09-05,Keyboard,Accessories,South,4,75,300
+169,2025-04-10,Desk,Furniture,North,5,320,1600
+170,2025-04-02,Desk,Furniture,East,4,320,1280
+171,2025-05-21,Desk,Furniture,South,1,320,320
+172,2025-12-24,Laptop,Electronics,East,1,950,950
+173,2025-01-07,Keyboard,Accessories,North,8,75,600
+174,2025-08-14,Desk,Furniture,West,8,320,2560
+175,2025-05-10,Office Chair,Furniture,North,3,180,540
+176,2025-07-25,Webcam,Electronics,North,2,85,170
+177,2025-03-19,Webcam,Electronics,North,2,85,170
+178,2025-05-08,Keyboard,Accessories,North,5,75,375
+179,2025-09-25,Monitor,Electronics,South,7,240,1680
+180,2025-06-02,Headphones,Electronics,West,8,120,960
+181,2025-11-09,Headphones,Electronics,North,5,120,600
+182,2025-05-16,Monitor,Electronics,South,4,240,960
+183,2025-03-30,Monitor,Electronics,South,3,240,720
+184,2025-07-29,Monitor,Electronics,North,3,240,720
+185,2025-01-17,Webcam,Electronics,East,8,85,680
+186,2025-12-26,Mouse,Accessories,East,5,35,175
+187,2025-05-16,Webcam,Electronics,South,2,85,170
+188,2025-10-06,Mouse,Accessories,North,7,35,245
+189,2025-03-14,Mouse,Accessories,East,3,35,105
+190,2025-06-07,Monitor,Electronics,South,1,240,240
+191,2025-08-28,Desk,Furniture,North,8,320,2560
+192,2025-09-14,Desk,Furniture,East,7,320,2240
+193,2025-11-03,Webcam,Electronics,North,8,85,680
+194,2025-11-06,Laptop,Electronics,East,7,950,6650
+195,2025-04-28,Desk,Furniture,North,1,320,320
+196,2025-03-31,Laptop,Electronics,North,5,950,4750
+197,2025-04-03,Webcam,Electronics,East,8,85,680
+198,2025-08-29,Headphones,Electronics,North,8,120,960
+199,2025-06-14,Office Chair,Furniture,East,7,180,1260
+200,2025-07-30,Monitor,Electronics,East,3,240,720
+201,2025-10-09,Webcam,Electronics,West,5,85,425
+202,2025-06-11,Laptop,Electronics,North,8,950,7600
+203,2025-07-26,Desk,Furniture,North,6,320,1920
+204,2025-01-28,Laptop,Electronics,West,8,950,7600
+205,2025-11-17,Mouse,Accessories,West,6,35,210
+206,2025-05-17,Webcam,Electronics,South,1,85,85
+207,2025-12-24,Keyboard,Accessories,West,5,75,375
+208,2025-11-19,Webcam,Electronics,North,2,85,170
+209,2025-10-10,Mouse,Accessories,East,3,35,105
+210,2025-04-26,Laptop,Electronics,North,7,950,6650
+211,2025-11-28,Monitor,Electronics,North,8,240,1920
+212,2025-09-18,Keyboard,Accessories,East,8,75,600
+213,2025-08-30,Desk,Furniture,West,7,320,2240
+214,2025-07-16,Mouse,Accessories,South,8,35,280
+215,2025-05-22,Mouse,Accessories,North,3,35,105
+216,2025-01-02,Headphones,Electronics,East,6,120,720
+217,2025-03-18,Desk,Furniture,West,5,320,1600
+218,2025-06-20,Webcam,Electronics,East,8,85,680
+219,2025-04-07,Headphones,Electronics,East,8,120,960
+220,2025-07-30,Mouse,Accessories,South,7,35,245
+221,2025-12-28,Laptop,Electronics,West,6,950,5700
+222,2025-09-11,Headphones,Electronics,South,7,120,840
+223,2025-02-21,Laptop,Electronics,East,3,950,2850
+224,2025-01-08,Webcam,Electronics,West,2,85,170
+225,2025-02-08,Keyboard,Accessories,South,7,75,525
+226,2025-11-16,Webcam,Electronics,East,5,85,425
+227,2025-12-12,Headphones,Electronics,East,2,120,240
+228,2025-10-05,Headphones,Electronics,West,6,120,720
+229,2025-11-20,Laptop,Electronics,South,2,950,1900
+230,2025-08-11,Desk,Furniture,North,4,320,1280
+231,2025-03-27,Monitor,Electronics,West,2,240,480
+232,2025-06-16,Desk,Furniture,North,1,320,320
+233,2025-07-11,Laptop,Electronics,East,5,950,4750
+234,2025-09-29,Headphones,Electronics,South,3,120,360
+235,2025-03-31,Headphones,Electronics,South,3,120,360
+236,2025-09-12,Monitor,Electronics,South,7,240,1680
+237,2025-11-23,Keyboard,Accessories,West,4,75,300
+238,2025-12-08,Desk,Furniture,East,8,320,2560
+239,2025-12-13,Laptop,Electronics,East,8,950,7600
+240,2025-06-26,Keyboard,Accessories,West,2,75,150
+241,2025-08-22,Desk,Furniture,East,7,320,2240
+242,2025-09-05,Desk,Furniture,West,4,320,1280
+243,2025-10-20,Monitor,Electronics,West,4,240,960
+244,2025-01-12,Office Chair,Furniture,East,5,180,900
+245,2025-10-17,Headphones,Electronics,North,5,120,600
+246,2025-04-28,Laptop,Electronics,East,8,950,7600
+247,2025-11-14,Office Chair,Furniture,South,4,180,720
+248,2025-11-18,Desk,Furniture,North,3,320,960
+249,2025-01-18,Laptop,Electronics,West,5,950,4750
+250,2025-06-01,Office Chair,Furniture,North,3,180,540
+251,2025-04-13,Office Chair,Furniture,South,7,180,1260
+252,2025-03-26,Keyboard,Accessories,East,6,75,450
+253,2025-06-23,Desk,Furniture,East,8,320,2560
+254,2025-03-14,Monitor,Electronics,North,8,240,1920
+255,2025-02-16,Mouse,Accessories,East,7,35,245
+256,2025-10-02,Headphones,Electronics,East,1,120,120
+257,2025-12-11,Monitor,Electronics,East,8,240,1920
+258,2025-02-25,Desk,Furniture,East,7,320,2240
+259,2025-11-14,Mouse,Accessories,North,8,35,280
+260,2025-11-22,Office Chair,Furniture,North,4,180,720
+261,2025-03-01,Webcam,Electronics,West,5,85,425
+262,2025-06-05,Keyboard,Accessories,North,1,75,75
+263,2025-05-01,Webcam,Electronics,North,2,85,170
+264,2025-07-09,Keyboard,Accessories,West,7,75,525
+265,2025-12-02,Headphones,Electronics,West,3,120,360
+266,2025-05-24,Monitor,Electronics,West,8,240,1920
+267,2025-08-16,Laptop,Electronics,South,6,950,5700
+268,2025-02-20,Webcam,Electronics,East,4,85,340
+269,2025-07-23,Office Chair,Furniture,North,6,180,1080
+270,2025-08-21,Desk,Furniture,North,4,320,1280
+271,2025-01-26,Monitor,Electronics,North,4,240,960
+272,2025-10-17,Office Chair,Furniture,South,4,180,720
+273,2025-10-28,Mouse,Accessories,South,2,35,70
+274,2025-03-17,Mouse,Accessories,East,4,35,140
+275,2025-03-08,Laptop,Electronics,South,5,950,4750
+276,2025-12-05,Desk,Furniture,North,3,320,960
+277,2025-07-03,Laptop,Electronics,North,3,950,2850
+278,2025-03-31,Mouse,Accessories,North,6,35,210
+279,2025-08-04,Desk,Furniture,South,1,320,320
+280,2025-08-18,Monitor,Electronics,West,2,240,480
+281,2025-09-15,Office Chair,Furniture,West,2,180,360
+282,2025-08-23,Mouse,Accessories,East,1,35,35
+283,2025-07-25,Laptop,Electronics,West,1,950,950
+284,2025-12-31,Headphones,Electronics,West,2,120,240
+285,2025-06-14,Webcam,Electronics,North,2,85,170
+286,2025-05-21,Keyboard,Accessories,South,2,75,150
+287,2025-08-21,Office Chair,Furniture,East,7,180,1260
+288,2025-12-02,Headphones,Electronics,North,2,120,240
+289,2025-04-27,Mouse,Accessories,West,7,35,245
+290,2025-07-24,Headphones,Electronics,West,6,120,720
+291,2025-08-07,Headphones,Electronics,East,2,120,240
+292,2025-03-20,Office Chair,Furniture,East,5,180,900
+293,2025-02-13,Webcam,Electronics,North,2,85,170
+294,2025-07-10,Monitor,Electronics,North,7,240,1680
+295,2025-12-10,Keyboard,Accessories,East,1,75,75
+296,2025-12-07,Monitor,Electronics,East,7,240,1680
+297,2025-11-04,Headphones,Electronics,East,1,120,120
+298,2025-10-23,Desk,Furniture,North,6,320,1920
+299,2025-04-25,Mouse,Accessories,West,3,35,105
+300,2025-02-28,Monitor,Electronics,East,6,240,1440
+301,2025-10-15,Desk,Furniture,West,4,320,1280
+302,2025-04-03,Laptop,Electronics,North,5,950,4750
+303,2025-06-29,Desk,Furniture,East,5,320,1600
+304,2025-10-17,Laptop,Electronics,South,3,950,2850
+305,2025-11-21,Headphones,Electronics,South,2,120,240
+306,2025-07-12,Laptop,Electronics,South,2,950,1900
+307,2025-03-22,Headphones,Electronics,East,8,120,960
+308,2025-10-18,Office Chair,Furniture,East,5,180,900
+309,2025-03-22,Monitor,Electronics,South,1,240,240
+310,2025-08-15,Laptop,Electronics,East,2,950,1900
+311,2025-08-01,Headphones,Electronics,West,8,120,960
+312,2025-06-26,Desk,Furniture,North,4,320,1280
+313,2025-12-14,Headphones,Electronics,East,2,120,240
+314,2025-04-23,Webcam,Electronics,North,5,85,425
+315,2025-04-15,Headphones,Electronics,North,1,120,120
+316,2025-05-11,Desk,Furniture,South,4,320,1280
+317,2025-01-04,Desk,Furniture,North,6,320,1920
+318,2025-03-08,Webcam,Electronics,South,7,85,595
+319,2025-02-06,Headphones,Electronics,East,4,120,480
+320,2025-01-10,Headphones,Electronics,West,1,120,120
+321,2025-10-22,Webcam,Electronics,East,2,85,170
+322,2025-05-29,Headphones,Electronics,West,7,120,840
+323,2025-06-16,Monitor,Electronics,North,7,240,1680
+324,2025-02-15,Keyboard,Accessories,East,8,75,600
+325,2025-08-12,Headphones,Electronics,South,2,120,240
+326,2025-06-08,Headphones,Electronics,West,2,120,240
+327,2025-03-28,Office Chair,Furniture,East,4,180,720
+328,2025-06-28,Monitor,Electronics,South,2,240,480
+329,2025-02-22,Office Chair,Furniture,South,3,180,540
+330,2025-03-30,Keyboard,Accessories,South,5,75,375
+331,2025-11-18,Keyboard,Accessories,South,2,75,150
+332,2025-12-15,Webcam,Electronics,West,8,85,680
+333,2025-08-14,Office Chair,Furniture,South,6,180,1080
+334,2025-11-20,Monitor,Electronics,West,8,240,1920
+335,2025-06-30,Desk,Furniture,North,5,320,1600
+336,2025-08-20,Monitor,Electronics,West,5,240,1200
+337,2025-05-27,Laptop,Electronics,East,1,950,950
+338,2025-08-25,Monitor,Electronics,West,2,240,480
+339,2025-06-14,Laptop,Electronics,South,8,950,7600
+340,2025-08-19,Webcam,Electronics,North,3,85,255
+341,2025-09-16,Monitor,Electronics,North,6,240,1440
+342,2025-12-29,Keyboard,Accessories,South,1,75,75
+343,2025-07-06,Webcam,Electronics,South,8,85,680
+344,2025-07-29,Office Chair,Furniture,West,5,180,900
+345,2025-02-03,Office Chair,Furniture,East,1,180,180
+346,2025-05-26,Office Chair,Furniture,West,2,180,360
+347,2025-02-11,Desk,Furniture,East,3,320,960
+348,2025-12-02,Keyboard,Accessories,East,6,75,450
+349,2025-06-08,Headphones,Electronics,North,3,120,360
+350,2025-12-10,Headphones,Electronics,South,6,120,720
+351,2025-01-10,Monitor,Electronics,East,7,240,1680
+352,2025-04-20,Office Chair,Furniture,South,5,180,900
+353,2025-04-26,Office Chair,Furniture,South,8,180,1440
+354,2025-06-01,Keyboard,Accessories,North,3,75,225
+355,2025-11-13,Monitor,Electronics,East,1,240,240
+356,2025-03-25,Keyboard,Accessories,South,7,75,525
+357,2025-01-23,Keyboard,Accessories,West,3,75,225
+358,2025-08-16,Headphones,Electronics,South,6,120,720
+359,2025-10-01,Desk,Furniture,South,8,320,2560
+360,2025-04-10,Mouse,Accessories,West,5,35,175
+361,2025-05-25,Office Chair,Furniture,West,8,180,1440
+362,2025-04-13,Headphones,Electronics,South,7,120,840
+363,2025-11-25,Keyboard,Accessories,North,5,75,375
+364,2025-12-31,Webcam,Electronics,North,6,85,510
+365,2025-03-24,Monitor,Electronics,North,5,240,1200
+366,2025-08-12,Desk,Furniture,South,8,320,2560
+367,2025-06-28,Monitor,Electronics,West,4,240,960
+368,2025-07-22,Laptop,Electronics,North,7,950,6650
+369,2025-02-11,Office Chair,Furniture,West,4,180,720
+370,2025-06-13,Office Chair,Furniture,North,4,180,720
+371,2025-03-12,Monitor,Electronics,South,6,240,1440
+372,2025-12-23,Laptop,Electronics,West,5,950,4750
+373,2025-11-12,Keyboard,Accessories,West,8,75,600
+374,2025-05-12,Laptop,Electronics,North,2,950,1900
+375,2025-02-26,Mouse,Accessories,West,3,35,105
+376,2025-03-04,Desk,Furniture,East,4,320,1280
+377,2025-11-24,Laptop,Electronics,West,4,950,3800
+378,2025-09-13,Webcam,Electronics,North,2,85,170
+379,2025-05-30,Laptop,Electronics,South,4,950,3800
+380,2025-05-04,Headphones,Electronics,East,1,120,120
+381,2025-09-26,Headphones,Electronics,North,3,120,360
+382,2025-07-19,Office Chair,Furniture,North,2,180,360
+383,2025-07-11,Webcam,Electronics,West,1,85,85
+384,2025-02-04,Desk,Furniture,East,1,320,320
+385,2025-10-25,Office Chair,Furniture,North,4,180,720
+386,2025-06-30,Office Chair,Furniture,North,3,180,540
+387,2025-12-23,Office Chair,Furniture,West,3,180,540
+388,2025-02-02,Webcam,Electronics,South,3,85,255
+389,2025-04-14,Webcam,Electronics,East,1,85,85
+390,2025-06-11,Laptop,Electronics,North,4,950,3800
+391,2025-05-10,Desk,Furniture,West,7,320,2240
+392,2025-07-02,Laptop,Electronics,East,4,950,3800
+393,2025-03-05,Laptop,Electronics,East,6,950,5700
+394,2025-08-14,Office Chair,Furniture,West,7,180,1260
+395,2025-09-12,Headphones,Electronics,South,6,120,720
+396,2025-02-12,Webcam,Electronics,East,6,85,510
+397,2025-11-05,Headphones,Electronics,West,2,120,240
+398,2025-02-22,Keyboard,Accessories,East,5,75,375
+399,2025-06-06,Monitor,Electronics,East,6,240,1440
+400,2025-12-20,Webcam,Electronics,South,7,85,595
+401,2025-01-22,Webcam,Electronics,West,6,85,510
+402,2025-11-24,Office Chair,Furniture,East,7,180,1260
+403,2025-07-06,Laptop,Electronics,West,2,950,1900
+404,2025-11-08,Keyboard,Accessories,South,1,75,75
+405,2025-02-04,Webcam,Electronics,South,1,85,85
+406,2025-07-16,Mouse,Accessories,East,6,35,210
+407,2025-07-09,Laptop,Electronics,West,3,950,2850
+408,2025-10-21,Office Chair,Furniture,North,8,180,1440
+409,2025-06-10,Keyboard,Accessories,West,6,75,450
+410,2025-01-14,Desk,Furniture,North,4,320,1280
+411,2025-10-15,Keyboard,Accessories,West,8,75,600
+412,2025-12-27,Monitor,Electronics,East,5,240,1200
+413,2025-12-22,Webcam,Electronics,East,4,85,340
+414,2025-03-11,Webcam,Electronics,North,4,85,340
+415,2025-08-16,Monitor,Electronics,South,8,240,1920
+416,2025-12-30,Monitor,Electronics,East,6,240,1440
+417,2025-03-22,Monitor,Electronics,East,5,240,1200
+418,2025-03-04,Keyboard,Accessories,South,6,75,450
+419,2025-09-10,Mouse,Accessories,South,3,35,105
+420,2025-08-28,Laptop,Electronics,East,6,950,5700
+421,2025-06-08,Keyboard,Accessories,North,2,75,150
+422,2025-07-29,Headphones,Electronics,West,8,120,960
+423,2025-11-25,Monitor,Electronics,East,3,240,720
+424,2025-12-15,Monitor,Electronics,West,8,240,1920
+425,2025-03-08,Office Chair,Furniture,South,3,180,540
+426,2025-09-23,Headphones,Electronics,North,1,120,120
+427,2025-03-24,Keyboard,Accessories,South,5,75,375
+428,2025-09-23,Office Chair,Furniture,East,4,180,720
+429,2025-04-11,Desk,Furniture,East,2,320,640
+430,2025-11-11,Desk,Furniture,East,3,320,960
+431,2025-03-29,Monitor,Electronics,South,3,240,720
+432,2025-02-11,Office Chair,Furniture,North,1,180,180
+433,2025-10-20,Laptop,Electronics,South,5,950,4750
+434,2025-11-18,Headphones,Electronics,West,1,120,120
+435,2025-05-06,Desk,Furniture,West,5,320,1600
+436,2025-02-07,Headphones,Electronics,West,5,120,600
+437,2025-08-01,Laptop,Electronics,West,3,950,2850
+438,2025-06-24,Webcam,Electronics,South,8,85,680
+439,2025-06-26,Keyboard,Accessories,East,6,75,450
+440,2025-09-21,Headphones,Electronics,East,3,120,360
+441,2025-08-27,Monitor,Electronics,South,6,240,1440
+442,2025-05-07,Monitor,Electronics,West,5,240,1200
+443,2025-05-29,Keyboard,Accessories,North,2,75,150
+444,2025-03-23,Headphones,Electronics,South,7,120,840
+445,2025-03-23,Office Chair,Furniture,South,6,180,1080
+446,2025-06-07,Webcam,Electronics,West,8,85,680
+447,2025-07-21,Webcam,Electronics,North,1,85,85
+448,2025-10-26,Webcam,Electronics,South,4,85,340
+449,2025-05-25,Office Chair,Furniture,North,1,180,180
+450,2025-10-02,Webcam,Electronics,East,8,85,680
+451,2025-03-10,Laptop,Electronics,West,2,950,1900
+452,2025-07-07,Desk,Furniture,West,6,320,1920
+453,2025-10-19,Laptop,Electronics,North,7,950,6650
+454,2025-02-07,Mouse,Accessories,East,6,35,210
+455,2025-11-16,Headphones,Electronics,East,8,120,960
+456,2025-07-21,Monitor,Electronics,North,3,240,720
+457,2025-03-15,Office Chair,Furniture,East,6,180,1080
+458,2025-01-24,Mouse,Accessories,North,7,35,245
+459,2025-08-31,Laptop,Electronics,East,3,950,2850
+460,2025-06-17,Webcam,Electronics,South,3,85,255
+461,2025-11-12,Office Chair,Furniture,West,3,180,540
+462,2025-12-29,Desk,Furniture,West,6,320,1920
+463,2025-07-08,Desk,Furniture,North,8,320,2560
+464,2025-10-26,Office Chair,Furniture,West,2,180,360
+465,2025-05-16,Desk,Furniture,West,1,320,320
+466,2025-03-29,Mouse,Accessories,West,1,35,35
+467,2025-01-17,Headphones,Electronics,South,3,120,360
+468,2025-08-14,Monitor,Electronics,North,4,240,960
+469,2025-07-31,Office Chair,Furniture,South,7,180,1260
+470,2025-02-01,Mouse,Accessories,West,7,35,245
+471,2025-12-06,Keyboard,Accessories,East,4,75,300
+472,2025-03-30,Webcam,Electronics,East,7,85,595
+473,2025-12-13,Webcam,Electronics,East,6,85,510
+474,2025-05-07,Desk,Furniture,South,8,320,2560
+475,2025-06-02,Desk,Furniture,South,5,320,1600
+476,2025-06-12,Desk,Furniture,West,4,320,1280
+477,2025-05-28,Webcam,Electronics,East,6,85,510
+478,2025-06-26,Monitor,Electronics,West,7,240,1680
+479,2025-05-28,Keyboard,Accessories,North,5,75,375
+480,2025-12-02,Monitor,Electronics,West,6,240,1440
+481,2025-04-14,Desk,Furniture,South,8,320,2560
+482,2025-02-25,Desk,Furniture,South,5,320,1600
+483,2025-12-09,Mouse,Accessories,North,4,35,140
+484,2025-02-21,Mouse,Accessories,North,4,35,140
+485,2025-02-21,Headphones,Electronics,West,6,120,720
+486,2025-07-28,Keyboard,Accessories,South,1,75,75
+487,2025-05-28,Webcam,Electronics,South,8,85,680
+488,2025-02-15,Office Chair,Furniture,North,5,180,900
+489,2025-08-02,Mouse,Accessories,South,1,35,35
+490,2025-09-11,Keyboard,Accessories,West,1,75,75
+491,2025-01-05,Keyboard,Accessories,North,5,75,375
+492,2025-05-26,Desk,Furniture,East,2,320,640
+493,2025-09-16,Webcam,Electronics,South,8,85,680
+494,2025-02-27,Webcam,Electronics,South,5,85,425
+495,2025-11-28,Office Chair,Furniture,West,3,180,540
+496,2025-06-22,Desk,Furniture,North,3,320,960
+497,2025-11-09,Desk,Furniture,South,4,320,1280
+498,2025-02-14,Headphones,Electronics,East,7,120,840
+499,2025-03-13,Headphones,Electronics,South,2,120,240
+500,2025-01-04,Webcam,Electronics,South,6,85,510
