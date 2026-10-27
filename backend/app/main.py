@@ -3,6 +3,9 @@ from contextlib import asynccontextmanager
 from pathlib import Path
 from tempfile import NamedTemporaryFile
 import os
+from app.services.bedrock_service import ask_bedrock
+
+
 
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -31,7 +34,10 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ],
     allow_credentials=False,
     allow_methods=["GET", "POST"],
     allow_headers=["Content-Type"],
@@ -56,14 +62,28 @@ def health():
 
 @app.post("/api/chat")
 def chat(request: ChatRequest):
-    return {
-        "question": request.question,
-        "answer": (
-            "AgenticSQL received your question. "
-            "AI-powered SQL generation will be added soon."
-        ),
-        "status": "success",
-    }
+    try:
+        answer = ask_bedrock(request.question)
+
+        return {
+            "question": request.question,
+            "answer": answer,
+            "status": "success",
+        }
+
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=400,
+            detail=str(exc),
+        ) from exc
+
+    except RuntimeError as exc:
+        print(f"Bedrock error: {exc}")
+
+        raise HTTPException(
+            status_code=502,
+            detail="Unable to get a response from Amazon Bedrock.",
+        ) from exc
 
 
 @app.get("/api/schema")
