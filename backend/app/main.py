@@ -4,7 +4,7 @@ from pathlib import Path
 from tempfile import NamedTemporaryFile
 import os
 from app.services.bedrock_service import ask_bedrock
-
+from app.agents.sql_agent import ask_sql_agent
 
 
 from fastapi import FastAPI, UploadFile, File, HTTPException
@@ -177,4 +177,36 @@ def run_query(request: SQLRequest):
         raise HTTPException(
             status_code=400,
             detail=f"Query failed: {exc}",
+        ) from exc
+@app.post("/api/agent/query")
+def agent_query(request: ChatRequest):
+    try:
+        response = ask_sql_agent(request.question)
+
+        if response.get("error"):
+            raise HTTPException(
+                status_code=422,
+                detail=response["error"],
+            )
+
+        return {
+            "status": "success",
+            **response,
+        }
+
+    except HTTPException:
+        raise
+
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=400,
+            detail=str(exc),
+        ) from exc
+
+    except Exception as exc:
+        print(f"SQL agent error: {exc}")
+
+        raise HTTPException(
+            status_code=502,
+            detail="Unable to process the analytics question.",
         ) from exc

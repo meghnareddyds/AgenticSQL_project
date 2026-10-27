@@ -108,3 +108,38 @@ export async function executeSQL(
 
   return data;
 }
+
+export interface AgentQueryResponse {
+  status: string;
+  question: string;
+  sql: string | null;
+  result: QueryResult | null;
+  error: string | null;
+}
+
+export async function analyzeData(
+  question: string
+): Promise<AgentQueryResponse> {
+  const response = await fetch(
+    `${API_BASE_URL}/api/agent/query`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ question }),
+    }
+  );
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(
+      typeof data.detail === "string"
+        ? data.detail
+        : "Unable to analyze the dataset."
+    );
+  }
+
+  return data as AgentQueryResponse;
+}

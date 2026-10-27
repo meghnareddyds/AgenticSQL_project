@@ -1,19 +1,32 @@
-
 import { useState } from "react";
+
 import ChatInput from "./components/ChatInput";
 import ChatMessage from "./components/ChatMessage";
-import { askQuestion } from "./services/api";
-import type { Message } from "./types/chat";
-import "./App.css";
 import DatasetPanel from "./components/DatasetPanel";
 import SQLPanel from "./components/SQLPanel";
 
+import {
+  askQuestion,
+  analyzeData,
+} from "./services/api";
+
+import type { Message } from "./types/chat";
+
+import "./App.css";
+
+type ChatMode = "ai" | "analyze";
+
 function App() {
   const [messages, setMessages] = useState<Message[]>([]);
+  const [mode, setMode] = useState<ChatMode>("analyze");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
   async function handleSend(question: string) {
+    if (loading || !question.trim()) {
+      return;
+    }
+
     const userMessage: Message = {
       id: crypto.randomUUID(),
       role: "user",
@@ -29,13 +42,28 @@ function App() {
     setError("");
 
     try {
-      const response = await askQuestion(question);
+      let assistantMessage: Message;
 
-      const assistantMessage: Message = {
-        id: crypto.randomUUID(),
-        role: "assistant",
-        content: response.answer,
-      };
+      if (mode === "ai") {
+        const response = await askQuestion(question);
+
+        assistantMessage = {
+          id: crypto.randomUUID(),
+          role: "assistant",
+          content: response.answer,
+        };
+      } else {
+        const response = await analyzeData(question);
+
+        assistantMessage = {
+          id: crypto.randomUUID(),
+          role: "assistant",
+          content:
+            "Analysis completed using your uploaded dataset.",
+          sql: response.sql ?? undefined,
+          result: response.result ?? undefined,
+        };
+      }
 
       setMessages((previous) => [
         ...previous,
@@ -73,6 +101,40 @@ function App() {
         </section>
 
         <section className="chat-container">
+          <div className="mode-selector">
+            <button
+              type="button"
+              className={
+                mode === "analyze"
+                  ? "mode-button active"
+                  : "mode-button"
+              }
+              onClick={() => setMode("analyze")}
+              disabled={loading}
+            >
+              Analyze Data
+            </button>
+
+            <button
+              type="button"
+              className={
+                mode === "ai"
+                  ? "mode-button active"
+                  : "mode-button"
+              }
+              onClick={() => setMode("ai")}
+              disabled={loading}
+            >
+              Ask AI
+            </button>
+          </div>
+
+          <div className="mode-description">
+            {mode === "analyze"
+              ? "Ask questions about your uploaded dataset. AgenticSQL will generate and execute validated SQL."
+              : "Ask general questions about SQL and data analytics."}
+          </div>
+
           <div className="messages">
             {messages.length === 0 && (
               <div className="empty-state">
@@ -93,7 +155,9 @@ function App() {
 
             {loading && (
               <p className="loading-text">
-                AgenticSQL is processing...
+                {mode === "analyze"
+                  ? "Generating SQL and analyzing your data..."
+                  : "AgenticSQL is thinking..."}
               </p>
             )}
           </div>
@@ -109,11 +173,13 @@ function App() {
             loading={loading}
           />
         </section>
+
         <DatasetPanel />
-      <SQLPanel />
+        <SQLPanel />
       </main>
     </div>
   );
 }
 
 export default App;
+
