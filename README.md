@@ -1,31 +1,31 @@
-# AgenticSQL_project
-Agentic SQL Query Generator - Agentic AI-Powered Natural Language to SQL Analytics Platform.
-AgenticSQL is a full-stack, AI-powered data analytics application that enables users to explore datasets using natural language.
+# AgenticSQL 
 
-Instead of manually writing SQL queries, users can upload a CSV dataset, ask questions in plain English, and receive AI-generated SQL queries along with actual results from their data.
+### AI-Powered Natural Language to SQL Analytics Platform
 
-The application combines Amazon Bedrock, LangGraph, FastAPI, DuckDB, and React to deliver an intelligent and interactive analytics experience.
+AgenticSQL is a full-stack AI-powered analytics application that lets users explore CSV datasets by asking questions in plain English. It uses **Amazon Bedrock (Amazon Nova Micro)** to generate SQL, **LangGraph** to orchestrate the query workflow, **SQLGlot** to validate SQL, and **DuckDB** to execute queries locally. Results are displayed in a **React + TypeScript** interface.
 
-Features
 
-1. Natural Language to SQL
+---
 
-Ask questions about your dataset in plain English.
+## ✨ Features
 
-Generate SQL queries using Amazon Nova Micro through Amazon Bedrock.
+- **Ask questions in natural language:** Generate SQL using the schema of the uploaded dataset.
+- **Agentic query workflow:** Use LangGraph to coordinate SQL generation, validation, and execution.
+- **CSV upload:** Import a dataset into DuckDB and inspect its columns, types, and row count.
+- **SQL analytics workspace:** Write and run validated SQL queries manually.
+- **Query transparency:** View generated SQL alongside the results table.
+- **AI chat:** Ask general SQL questions through Amazon Bedrock.
+- **Local-first development:** Run the database, API, and frontend on your own machine.
 
-Automatically execute validated, read-only SQL queries.
+### Example: Top five products by quantity sold
 
-View generated SQL alongside query results.
+**Question:**
 
-Example:
+> Give me the top 5 sold products.
 
-Question:
+**Generated SQL:**
 
-Give me the top 5 sold products.
-
-Generated SQL:
-
+```sql
 SELECT
     product,
     SUM(quantity) AS total_quantity
@@ -33,182 +33,64 @@ FROM sales_data
 GROUP BY product
 ORDER BY total_quantity DESC
 LIMIT 5;
+```
 
-Example Results:
+**Example output (included sample dataset):**
 
-Product
+| Product | Total Quantity |
+| :--- | ---: |
+| Desk | 352 |
+| Monitor | 323 |
+| Headphones | 318 |
+| Webcam | 288 |
+| Office Chair | 286 |
 
-Total Quantity
+---
 
-Desk
+##  Architecture
 
-352
+```mermaid
+flowchart TD
+    A[React + TypeScript Frontend] --> B[FastAPI Backend]
+    B --> C{Request type}
+    C -->|Natural-language analysis| D[LangGraph SQL Agent]
+    D --> E[Read DuckDB Schema]
+    E --> F[Amazon Bedrock / Nova Micro]
+    F --> G[SQLGlot Validation]
+    G --> H[Read-only DuckDB Query]
+    H --> I[SQL + Results Table]
+    I --> A
+    C -->|Manual SQL| G
+    C -->|CSV upload| J[Import CSV into DuckDB]
+    C -->|General AI chat| F
+```
 
-Monitor
+**Agent flow:** Question → schema inspection → SQL generation → SQL validation → DuckDB execution → results.
 
-323
 
-Headphones
 
-318
+---
 
-Webcam
+## 🛠️ Tech Stack
 
-288
+| Layer | Technology |
+| :--- | :--- |
+| Frontend | React, TypeScript, Vite |
+| Backend | Python, FastAPI |
+| AI platform | Amazon Bedrock |
+| Language model | Amazon Nova Micro |
+| Agent orchestration | LangGraph |
+| SQL database | DuckDB |
+| SQL parsing and validation | SQLGlot |
+| AWS SDK | Boto3 |
+| Version control | Git, GitHub |
 
-Office Chair
+---
 
-286
+## 📁 Project Structure
 
-Results shown are from the included sample sales dataset.
-
-2. AI Agent Workflow with LangGraph
-
-AgenticSQL uses LangGraph to coordinate the natural-language-to-SQL workflow.
-
-The agent processes a user's question, generates SQL, validates it, executes the query, and returns structured results.
-
-Workflow:
-
-User Question
-      |
-      v
-Read Dataset Schema
-      |
-      v
-Amazon Bedrock (Nova Micro)
-      |
-      v
-Generate SQL Query
-      |
-      v
-SQLGlot Validation
-      |
-      v
-DuckDB Query Execution
-      |
-      v
-Return SQL + Query Results
-      |
-      v
-React Frontend
-
-3. CSV Dataset Upload
-
-Upload CSV files through the web interface.
-
-Automatically detect column names and data types.
-
-Store uploaded data in a local DuckDB database.
-
-View dataset metadata, including column types and total row count.
-
-4. SQL Analytics Workspace
-
-Write and execute SQL queries manually.
-
-View SQL query results in a structured table.
-
-Explore uploaded datasets without relying entirely on AI-generated queries.
-
-5. AI Chat
-
-Interact with Amazon Nova Micro through Amazon Bedrock.
-
-Ask general SQL-related questions.
-
-Switch to dataset analysis when you want to query uploaded data.
-
-6. SQL Safety Controls
-
-Validate generated SQL using SQLGlot.
-
-Restrict query execution to supported read-only operations.
-
-Limit returned results.
-
-Execute queries through a read-only database connection.
-
-Note: The current implementation is intended for local development and demonstration. Additional authentication, resource limits, and security hardening would be required before public deployment.
-
-🛠️ Tech Stack
-
-Layer
-
-Technology
-
-Frontend
-
-React, TypeScript, Vite
-
-Backend
-
-Python, FastAPI
-
-AI Model
-
-Amazon Nova Micro
-
-LLM Platform
-
-Amazon Bedrock
-
-Agent Orchestration
-
-LangGraph
-
-Database
-
-DuckDB
-
-SQL Validation
-
-SQLGlot
-
-AWS Integration
-
-Boto3
-
-Version Control
-
-Git and GitHub
-
-🏗️ Project Architecture
-
-                  ┌───────────────────────┐
-                  │     React Frontend    │
-                  │    TypeScript + Vite  │
-                  └───────────┬───────────┘
-                              │
-                              ▼
-                  ┌───────────────────────┐
-                  │     FastAPI Backend   │
-                  │                       │
-                  │  /api/chat            │
-                  │  /api/agent/query     │
-                  │  /api/upload          │
-                  │  /api/schema          │
-                  │  /api/query           │
-                  └───────────┬───────────┘
-                              │
-                  ┌───────────▼───────────┐
-                  │    LangGraph Agent    │
-                  │                       │
-                  │  SQL Generation       │
-                  │  SQL Validation       │
-                  │  Query Execution      │
-                  └───────┬───────┬───────┘
-                          │       │
-             ┌────────────▼┐    ┌─▼─────────────┐
-             │ Amazon      │    │ DuckDB        │
-             │ Bedrock     │    │ Local SQL     │
-             │ Nova Micro  │    │ Database      │
-             └─────────────┘    └───────────────┘
-
-📂 Project Structure
-
+```text
 AgenticSQL_project/
-│
 ├── backend/
 │   ├── app/
 │   │   ├── api/
@@ -219,7 +101,6 @@ AgenticSQL_project/
 │   ├── requirements.txt
 │   ├── test_sql_agent.py
 │   └── test_sql_generation.py
-│
 ├── frontend/
 │   ├── public/
 │   ├── src/
@@ -230,190 +111,171 @@ AgenticSQL_project/
 │   │   └── App.css
 │   ├── package.json
 │   └── vite.config.ts
-│
 ├── sample_data/
 │   ├── generate_sales.py
 │   └── sales.csv
-│
 └── README.md
+```
 
-⚙️ Getting Started
+---
 
-Prerequisites
+##  Getting Started
 
-Make sure you have:
+### Prerequisites
 
-Python 3.10 or newer
+- Python 3.10 or newer
+- Node.js and npm
+- Git
+- AWS account with Amazon Bedrock model invocation permissions
+- AWS CLI configured with a profile authorized to invoke Amazon Nova Micro
 
-Node.js and npm
+### 1. Clone the repository
 
-Git
-
-An AWS account with access to Amazon Bedrock
-
-AWS CLI configured with credentials authorized to invoke Amazon Nova Micro
-
-Step 1: Clone the Repository
-
+```powershell
 git clone https://github.com/meghnareddyds/AgenticSQL_project.git
 cd AgenticSQL_project
+```
 
-Step 2: Set Up the Backend
+### 2. Set up the backend
 
-On Windows PowerShell:
-
+```powershell
 cd backend
-
 python -m venv .venv
-
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
 
-Step 3: Configure AWS Credentials
+### 3. Configure AWS access
 
-Install the AWS CLI and configure a named profile:
+If you have not configured your AWS CLI profile yet:
 
+```powershell
 aws configure --profile agenticsql
+```
 
-Set the AWS profile and region for the current PowerShell session:
+In the terminal where you will start the backend:
 
+```powershell
 $env:AWS_PROFILE = "agenticsql"
 $env:AWS_DEFAULT_REGION = "us-east-2"
+```
 
-Security: Never commit AWS access keys, credentials, or .env files to GitHub.
+**Donot commit AWS credentials, access keys, or `.env` files.** Prefer temporary credentials when available.
 
-Step 4: Start the Backend
+### 4. Start FastAPI
 
-From the backend directory:
+From the `backend` directory:
 
+```powershell
 .\.venv\Scripts\python.exe -m uvicorn app.main:app --reload
+```
 
-The backend runs at:
+- Backend: `http://localhost:8000`
+- Interactive API docs: `http://localhost:8000/docs`
 
-http://localhost:8000
+### 5. Start the frontend
 
-FastAPI API documentation:
+Open **a second terminal** at the project root:
 
-http://localhost:8000/docs
-
-Step 5: Start the Frontend
-
-Open a second terminal:
-
+```powershell
 cd frontend
-
 npm install
-
 npm run dev
+```
 
-Open the local URL displayed by Vite, typically:
+Open the URL shown by Vite (usually `http://localhost:5173`).
 
-http://localhost:5173
+### 6. Upload a dataset and ask a question
 
-Step 6: Upload a Dataset
+1. Open **Dataset Management** in the application.
+2. Upload `sample_data/sales.csv`.
+3. Confirm the detected schema and row count.
+4. Select **Analyze Data** and ask: **“Give me the top 5 sold products.”**
+5. Inspect the generated SQL and returned results.
 
-Open the application in your browser.
+---
 
-Navigate to Dataset Management.
+## 💬 Questions to Try
 
-Upload sample_data/sales.csv.
+- What are the top five products by quantity sold?
+- Which region generated the highest revenue?
+- What is the total revenue?
+- How many orders are in the dataset?
+- What is the average order value?
+- Which category generates the most revenue?
 
-Verify that the table schema and row count appear.
+---
 
-Select Analyze Data and ask a question about the dataset.
+## 🔌 API Endpoints
 
-Example Questions
+| Method | Endpoint | Purpose |
+| :--- | :--- | :--- |
+| `GET` | `/health` | Backend health check |
+| `GET` | `/api/schema` | Get the active dataset schema |
+| `POST` | `/api/upload` | Upload a CSV file |
+| `POST` | `/api/query` | Validate and execute a SQL query |
+| `POST` | `/api/chat` | General AI chat through Bedrock |
+| `POST` | `/api/agent/query` | Natural-language-to-SQL agent workflow |
 
-Try asking AgenticSQL:
+Explore request and response formats at `http://localhost:8000/docs` while the backend is running.
 
-What are the top 5 products by quantity sold?
+---
 
-Which region generated the highest revenue?
+## 🧪 Testing and Build
 
-What is the total revenue?
+From the **project root**, run the existing integration scripts:
 
-How many orders are in the dataset?
-
-What is the average order value?
-
-Which product category generates the most revenue?
-
-AgenticSQL generates SQL based on the available dataset schema and returns the query results.
-
-API Endpoints
-
-Method
-
-Endpoint
-
-Description
-
-GET
-
-/health
-
-Check backend health
-
-GET
-
-/api/schema
-
-Retrieve dataset schema
-
-POST
-
-/api/upload
-
-Upload a CSV dataset
-
-POST
-
-/api/query
-
-Execute a validated SQL query
-
-POST
-
-/api/chat
-
-Ask the Bedrock-powered AI assistant
-
-POST
-
-/api/agent/query
-
-Run the natural-language-to-SQL agent
-
-Interactive API documentation is available through FastAPI's Swagger UI.
-
- Testing
-
-The project includes scripts for testing SQL generation and the agent workflow.
-
-From the project root, activate the backend virtual environment and run:
-
+```powershell
 .\backend\.venv\Scripts\python.exe backend\test_sql_generation.py
-
 .\backend\.venv\Scripts\python.exe backend\test_sql_agent.py
+```
 
-To verify the frontend production build:
+Verify the frontend production build:
 
+```powershell
 cd frontend
 npm run build
+```
 
-🔒 Security and Cost Considerations
+> The agent tests may invoke Amazon Bedrock and incur usage-based charges.
 
-The application includes SQL validation and read-only execution controls, but these should not be treated as a complete security boundary for untrusted users.
+---
 
-Amazon Bedrock model inference is usage-based and may incur AWS charges. Monitor usage through AWS Billing and Cost Management, and avoid exposing your AWS credentials.
+## 🗺️ Roadmap
 
-🎯 Project Goal
+### Completed
 
-AgenticSQL demonstrates how generative AI and agent-based workflows can simplify data exploration by translating natural-language questions into executable SQL queries.
+- [x] FastAPI backend and React + TypeScript frontend
+- [x] DuckDB integration and CSV upload
+- [x] Dataset schema inspection
+- [x] SQL validation using SQLGlot
+- [x] Amazon Bedrock and Nova Micro integration
+- [x] LangGraph SQL agent
+- [x] Natural-language-to-SQL execution
+- [x] SQL and results displayed in the web interface
 
-The project brings together full-stack development, cloud-based language models, database querying, and AI orchestration in a practical analytics application.
+### Planned
 
-👩‍💻 Author
+-  Interactive charts and visualizations
+-  ChromaDB semantic retrieval
+-  Improved query explanations and insights
 
-Meghna Reddy
+---
 
-GitHub: meghnareddyds
+## Security and AWS Costs
+
+AgenticSQL is a **local development prototype**. Its SQL safeguards are not a substitute for authentication, query resource limits, rate limiting, and deployment isolation in a public environment.
+
+Amazon Bedrock model inference is usage-based. Monitor AWS Billing and Cost Management, avoid unnecessary test calls, and keep credentials outside source control.
+
+---
+
+## 🎯 Project Goal
+
+AgenticSQL demonstrates how generative AI, agent orchestration, and relational databases can work together to make analytics accessible through natural-language questions.
+
+---
+
+## 👩‍💻 Author
+
+**Meghna Reddy** · GitHub: **meghnareddyds**
+
